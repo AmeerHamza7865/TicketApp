@@ -7,6 +7,7 @@ import 'package:ticket_app/Base/Widgets/ticket_view.dart';
 import 'package:ticket_app/Base/res/Media.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
 import 'package:ticket_app/Base/utils/all_json.dart';
+import 'package:ticket_app/Screen/widgets/hotel.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -77,6 +78,7 @@ class HomeScreen extends StatelessWidget {
                 DoubleTextApp(
                   bigText: 'Upcoming Flights',
                   smallText: 'View all',
+                  func: () => Navigator.pushNamed(context, "all_tickets"),
                 ),
                 SizedBox(
                   height: 20,
@@ -90,7 +92,20 @@ class HomeScreen extends StatelessWidget {
                                 ticket: singleTicket,
                               ))
                           .toList(),
-                    ))
+                    )),
+                SizedBox(
+                  height: 20,
+                ),
+                DoubleTextApp(
+                    bigText: "Hotels",
+                    smallText: "View All",
+                    func: () {
+                      print("Hostels Screen Is Loaded");
+                    })
+
+                // Hotels Layout Design
+                ,
+                Hotels()
               ],
             ),
           ),

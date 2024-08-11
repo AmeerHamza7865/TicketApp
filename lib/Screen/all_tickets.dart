@@ -21,7 +21,10 @@ class AllTickets extends StatelessWidget {
               children: ticketList
                   .map((singleTicket) => Container(
                       margin: EdgeInsets.only(bottom: 20),
-                      child: TicketView(ticket: singleTicket)))
+                      child: TicketView(
+                        ticket: singleTicket,
+                        isFullScreen: true,
+                      )))
                   .toList(),
             ),
           )
