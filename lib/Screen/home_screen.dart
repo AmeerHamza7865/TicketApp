@@ -7,6 +7,7 @@ import 'package:ticket_app/Base/Widgets/ticket_view.dart';
 import 'package:ticket_app/Base/res/Media.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
 import 'package:ticket_app/Base/utils/all_json.dart';
+import 'package:ticket_app/Screen/Widget/hotels.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,6 +24,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,20 +79,44 @@ class HomeScreen extends StatelessWidget {
                 DoubleTextApp(
                   bigText: 'Upcoming Flights',
                   smallText: 'View all',
+                  func: ()=>Navigator.pushNamed(context,"/all_tickets"),
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: ticketList
-                          .take(2)
-                          .map((singleTicket) => TicketView(
-                                ticket: singleTicket,
-                              ))
-                          .toList(),
-                    ))
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: ticketList
+                        .take(2)
+                        .map((singleTicket) => TicketView(
+                              ticket: singleTicket,
+                            ))
+                        .toList(),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                DoubleTextApp(bigText: "Hotels", smallText: "View All",func: (){ print("Hotels is Clicked");},),
+                SizedBox(
+                  height: 20,
+                ),
+               SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                 children: [
+                   Hotels(),
+                   Hotels(),
+
+                    Hotels(),
+                   Hotels(),
+
+                    Hotels(),
+                   Hotels(),
+                 ],
+               )),
+              
               ],
             ),
           ),
