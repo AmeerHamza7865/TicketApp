@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ticket_app/Base/navbar_bottom.dart';
-import 'package:ticket_app/Screen/all_tickets.dart';
+import 'package:ticket_app/Screen/Home/all_tickets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,10 +22,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: BottomNavbar(),
-      routes:  {
-        "/":(context)=> BottomNavbar(),
-        "/all_tickets":(context)=>AllTickets(),
-        
+      routes: {
+        "/": (context) => BottomNavbar(),
+        "/all_tickets": (context) => AllTickets(),
       },
     );
   }

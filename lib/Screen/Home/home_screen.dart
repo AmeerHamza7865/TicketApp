@@ -7,7 +7,7 @@ import 'package:ticket_app/Base/Widgets/ticket_view.dart';
 import 'package:ticket_app/Base/res/Media.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
 import 'package:ticket_app/Base/utils/all_json.dart';
-import 'package:ticket_app/Screen/Widget/hotels.dart';
+import 'package:ticket_app/Screen/Home/Widget/hotels.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                 DoubleTextApp(
                   bigText: 'Upcoming Flights',
                   smallText: 'View all',
-                  func: ()=>Navigator.pushNamed(context,"/all_tickets"),
+                  func: () => Navigator.pushNamed(context, "/all_tickets"),
                 ),
                 SizedBox(
                   height: 20,
@@ -98,25 +98,26 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                DoubleTextApp(bigText: "Hotels", smallText: "View All",func: (){ print("Hotels is Clicked");},),
+                DoubleTextApp(
+                  bigText: "Hotels",
+                  smallText: "View All",
+                  func: () {
+                    print("Hotels is Clicked");
+                  },
+                ),
                 SizedBox(
                   height: 20,
                 ),
-               SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                 children: [
-                   Hotels(),
-                   Hotels(),
-
-                    Hotels(),
-                   Hotels(),
-
-                    Hotels(),
-                   Hotels(),
-                 ],
-               )),
-              
+                SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: hotelsList
+                          .take(2)
+                          .map((firstHotel) => Hotels(
+                                hotel: firstHotel,
+                              ))
+                          .toList(),
+                    )),
               ],
             ),
           ),

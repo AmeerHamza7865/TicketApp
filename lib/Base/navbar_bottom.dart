@@ -2,7 +2,8 @@
 
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:ticket_app/Screen/home_screen.dart';
+import 'package:ticket_app/Screen/Home/home_screen.dart';
+import 'package:ticket_app/Screen/Search/search_screen.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({super.key});
@@ -12,24 +13,20 @@ class BottomNavbar extends StatefulWidget {
 }
 
 class _BottomNavbarState extends State<BottomNavbar> {
-
-  final appScreen=[
+  final appScreen = [
     HomeScreen(),
-    Center(child: const Text("Search")),
+    SearchScreen(),
     Center(child: const Text("Tickets")),
     Center(child: const Text("Profile")),
   ];
 
-  int _selectedIndex=0;
+  int _selectedIndex = 0;
 
-  void _onTab_Index(int index){
+  void _onTab_Index(int index) {
     setState(() {
-    _selectedIndex=index;
-      
+      _selectedIndex = index;
     });
-   
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +36,8 @@ class _BottomNavbarState extends State<BottomNavbar> {
       // ),
       body: appScreen[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: _onTab_Index,
-        currentIndex: _selectedIndex,
+          onTap: _onTab_Index,
+          currentIndex: _selectedIndex,
           selectedItemColor: Colors.blueGrey,
           unselectedItemColor: const Color(0xFF526400),
           showSelectedLabels: false,
