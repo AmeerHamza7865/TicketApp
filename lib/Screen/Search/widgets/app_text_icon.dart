@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
 
 class AppTextIcon extends StatelessWidget {
-  const AppTextIcon({super.key});
+  final String text;
+  final IconData icon;
+  final Color iconColor;
+  const AppTextIcon(
+      {super.key,
+      required this.text,
+      required this.icon,
+      required this.iconColor});
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +20,14 @@ class AppTextIcon extends StatelessWidget {
       child: Row(
         children: [
           Icon(
-            Icons.flight_takeoff_rounded,
-            color: AppStyles.planeColor,
+            icon,
+            color: iconColor,
           ),
           const SizedBox(
             width: 10,
           ),
           Text(
-            'Departure',
+            text,
             style: AppStyles.textStyle,
           )
         ],
