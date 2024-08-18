@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:ticket_app/Base/res/Media.dart';
+
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
 
 class Hotels extends StatelessWidget {

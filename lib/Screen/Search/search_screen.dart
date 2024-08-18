@@ -7,6 +7,7 @@ import 'package:ticket_app/Base/res/styles/app_styles.dart';
 import 'package:ticket_app/Screen/Search/widgets/app_text_icon.dart';
 import 'package:ticket_app/Screen/Search/widgets/app_tickets_tabs.dart';
 import 'package:ticket_app/Screen/Search/widgets/find_tickets.dart';
+import 'package:ticket_app/Screen/Search/widgets/tickets_promotion.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -29,7 +30,10 @@ class SearchScreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            AppTicketsTabs(),
+            AppTicketsTabs(
+              FirstTabText: "Airline Tickets",
+              SecondTabText: "Hotels",
+            ),
             SizedBox(
               height: 25,
             ),
@@ -59,37 +63,7 @@ class SearchScreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Row(
-              children: [
-                Container(
-                  width: size.width * .42,
-                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade200,
-                          spreadRadius: 2,
-                          blurRadius: 1,
-                        )
-                      ]),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 190,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Colors.white,
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage(AppMedia.planeSit))),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            )
+            TicketsPromotion(),
           ]),
     );
   }

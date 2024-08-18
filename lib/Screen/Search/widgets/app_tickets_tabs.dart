@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:ticket_app/Screen/Search/widgets/app_text_icon.dart';
 
 class AppTicketsTabs extends StatelessWidget {
-  const AppTicketsTabs({super.key});
-
+  const AppTicketsTabs(
+      {super.key, required this.FirstTabText, required this.SecondTabText});
+  final String FirstTabText;
+  final String SecondTabText;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,10 +16,10 @@ class AppTicketsTabs extends StatelessWidget {
       child: Row(
         children: [
           AppTab(
-            tabText: "Airline Tickets",
+            tabText: FirstTabText,
           ),
           AppTab(
-            tabText: "Hotels",
+            tabText: SecondTabText,
             tabBorder: true,
             tabColor: true,
           ),

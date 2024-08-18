@@ -10,22 +10,30 @@ class AppColumnLayout extends StatelessWidget {
   final String topText;
   final String bottomText;
   final CrossAxisAlignment alignment;
+  final bool? isColor;
   const AppColumnLayout(
       {super.key,
       required this.topText,
       required this.bottomText,
-      required this.alignment});
+      required this.alignment,
+      this.isColor});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: alignment,
       children: [
-        TextStyleThird(text: topText),
+        TextStyleThird(
+          text: topText,
+          isColor: isColor,
+        ),
         const SizedBox(
           height: 5,
         ),
-        TextStyleFourth(text: bottomText),
+        TextStyleFourth(
+          text: bottomText,
+          isColor: isColor,
+        ),
       ],
     );
   }

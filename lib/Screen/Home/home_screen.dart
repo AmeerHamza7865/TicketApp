@@ -4,6 +4,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/Base/Widgets/double_text_widget.dart';
 import 'package:ticket_app/Base/Widgets/ticket_view.dart';
+import 'package:ticket_app/Base/app_routes.dart';
 import 'package:ticket_app/Base/res/Media.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
 import 'package:ticket_app/Base/utils/all_json.dart';
@@ -79,7 +80,8 @@ class HomeScreen extends StatelessWidget {
                 DoubleTextApp(
                   bigText: 'Upcoming Flights',
                   smallText: 'View all',
-                  func: () => Navigator.pushNamed(context, "/all_tickets"),
+                  func: () =>
+                      Navigator.pushNamed(context, AppRoutes.allTickets),
                 ),
                 SizedBox(
                   height: 20,
@@ -102,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                   bigText: "Hotels",
                   smallText: "View All",
                   func: () {
-                    print("Hotels is Clicked");
+                    Navigator.pushNamed(context, AppRoutes.allHotels);
                   },
                 ),
                 SizedBox(

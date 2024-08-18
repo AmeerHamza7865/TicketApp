@@ -12,7 +12,10 @@ class AppStyles {
   static Color ticketOrange = const Color(0xFFF37B67);
   static Color planeColor = const Color(0xFFBFC2DF);
   static Color ticketBtn = const Color(0xD91130CE);
-
+  static Color circleColor = const Color(0xFF189999);
+  static Color ticketColor = const Color(0xFFFFFFFF);
+  static Color dotColor = const Color(0XFF8ACCF7);
+  static Color planeSecondColor = const Color(0xFFBACCF7);
   static TextStyle textStyle =
       TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
   static TextStyle headingStyle1 =
@@ -21,6 +24,6 @@ class AppStyles {
       TextStyle(fontSize: 21, fontWeight: FontWeight.bold);
   static TextStyle headingStyle3 =
       TextStyle(fontSize: 17, fontWeight: FontWeight.w500);
-  static TextStyle headingStyle4 =
-      TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+  static TextStyle headingStyle4 = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey.shade500);
 }

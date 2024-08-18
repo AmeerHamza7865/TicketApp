@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
-import 'package:ticket_app/Screen/Home/all_tickets.dart';
 
 class DoubleTextApp extends StatelessWidget {
   const DoubleTextApp(
