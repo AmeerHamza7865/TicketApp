@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
 import 'package:ticket_app/Base/utils/all_json.dart';
+import 'package:ticket_app/Screen/Search/widgets/expanded_text_widget.dart';
 
 class HotelsDetails extends StatefulWidget {
   const HotelsDetails({super.key});
@@ -82,8 +83,7 @@ class _HotelsDetailsState extends State<HotelsDetails> {
               delegate: SliverChildListDelegate([
             Padding(
               padding: EdgeInsets.all(16),
-              child: Text(
-                  "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
+              child: ExpandedTextWidget(text: hotelsList[index]["details"]),
             ),
             Padding(
               padding: EdgeInsets.all(16),
@@ -101,7 +101,8 @@ class _HotelsDetailsState extends State<HotelsDetails> {
                     return Container(
                         margin: EdgeInsets.all(16),
                         color: Colors.red,
-                        child: Image.asset(""));
+                        child: Image.network(
+                            "https://via.placeholder.com/200x200"));
                   }),
             )
           ]))
