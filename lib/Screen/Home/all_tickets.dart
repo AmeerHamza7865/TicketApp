@@ -23,7 +23,7 @@ class AllTickets extends StatelessWidget {
                   .map((singleTicket) => GestureDetector(
                         onTap: () {
                           var index = ticketList.indexOf(singleTicket);
-                          print("I Am Tapped on Ticket index $index");
+
                           Navigator.pushNamed(context, AppRoutes.TicketScreen,
                               arguments: {"index": index});
                         },

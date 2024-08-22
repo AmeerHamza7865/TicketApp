@@ -23,7 +23,7 @@ class _ExpandedTextWidgetState extends State<ExpandedTextWidget> {
       children: [
         Text(
           widget.text,
-          maxLines: isExpanded == true ? null : 3,
+          maxLines: isExpanded == true ? null : 6,
           overflow:
               isExpanded == true ? TextOverflow.visible : TextOverflow.ellipsis,
         ),

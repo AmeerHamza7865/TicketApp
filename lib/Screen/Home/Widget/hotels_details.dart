@@ -95,14 +95,17 @@ class _HotelsDetailsState extends State<HotelsDetails> {
             Container(
               height: 200.0,
               child: ListView.builder(
-                  itemCount: 10,
+                  itemCount: hotelsList[index]["images"].length,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
+                  itemBuilder: (context, imageindex) {
                     return Container(
                         margin: EdgeInsets.all(16),
                         color: Colors.red,
-                        child: Image.network(
-                            "https://via.placeholder.com/200x200"));
+                        child: Image.asset(
+                            fit: BoxFit.fill,
+                            width: 200,
+                            height: 200,
+                            "assets/images/${hotelsList[index]["images"][imageindex]}"));
                   }),
             )
           ]))
