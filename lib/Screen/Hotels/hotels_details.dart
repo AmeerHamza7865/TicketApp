@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
 import 'package:ticket_app/Base/utils/all_json.dart';
+import 'package:ticket_app/Screen/Hotels/expanded_text_widget.dart';
 
 class HotelsDetails extends StatefulWidget {
   const HotelsDetails({super.key});
@@ -17,6 +18,7 @@ class _HotelsDetailsState extends State<HotelsDetails> {
   void didChangeDependencies() {
     var args = ModalRoute.of(context)!.settings.arguments as Map;
     index = args['index'];
+    print("index is Coming : $index");
     super.didChangeDependencies();
   }
 
@@ -82,9 +84,7 @@ class _HotelsDetailsState extends State<HotelsDetails> {
               delegate: SliverChildListDelegate([
             Padding(
               padding: EdgeInsets.all(16),
-              child: Text(
-                  "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
-            ),
+              child: ExpandedTextWidget(text: "Our hotel rooms offer a perfect blend of comfort and style, with plush bedding, modern amenities, and elegant decor. Each room features a spacious layout, high-speed Wi-Fi, and a flat-screen TV for your entertainment. Enjoy a restful night’s sleep in a serene environment, with convenient access to our on-site facilities and services"),),
             Padding(
               padding: EdgeInsets.all(16),
               child: Text(
@@ -101,7 +101,7 @@ class _HotelsDetailsState extends State<HotelsDetails> {
                     return Container(
                         margin: EdgeInsets.all(16),
                         color: Colors.red,
-                        child: Image.asset(""));
+                        child: Image.network("https://via.placeholder.com/200x200"));
                   }),
             )
           ]))

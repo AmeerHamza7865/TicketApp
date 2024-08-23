@@ -62,9 +62,11 @@ class HotelGridView extends StatelessWidget {
             aspectRatio: 1.2,
             child: GestureDetector(
               onTap: () {
-                print("index $index");
+                print("index is Clicked $index");
+                // Navigator.pushNamed(context,AppRoutes.hotelsTest);
                 Navigator.pushNamed(context, AppRoutes.hotelsDetails,
                     arguments: {'index': index});
+
               },
               child: Container(
                 decoration: BoxDecoration(
