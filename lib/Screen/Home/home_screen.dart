@@ -3,6 +3,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/Base/Widgets/double_text_widget.dart';
+import 'package:ticket_app/Base/Widgets/heading_text.dart';
 import 'package:ticket_app/Base/Widgets/ticket_view.dart';
 import 'package:ticket_app/Base/app_routes.dart';
 import 'package:ticket_app/Base/res/Media.dart';
@@ -37,10 +38,7 @@ class HomeScreen extends StatelessWidget {
                         SizedBox(
                           height: 5,
                         ),
-                        Text(
-                          "Book Tickets",
-                          style: AppStyles.headingStyle1,
-                        ),
+                      HeadingTextWidget(text: "Book Tickets",isColor: false,),
                       ],
                     ),
                     Container(

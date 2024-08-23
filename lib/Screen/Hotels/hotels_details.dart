@@ -93,7 +93,7 @@ class _HotelsDetailsState extends State<HotelsDetails> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
-            Container(
+           Container(
               height: 200.0,
               child: ListView.builder(
                   itemCount: hotelsList[index]["images"].length,
