@@ -33,24 +33,52 @@ List<Map<String, dynamic>> hotelsList = [
     'image': "img1.jpeg",
     'destination': 'Open space',
     'country': 'Landon',
-    'price': 24
+    'price': 24,
+    'details':
+        "Hotel rooms offer a cozy retreat with comfortable beds and stylish decor, providing a home away from home. Modern amenities, like high-speed internet and sleek bathrooms, enhance convenience and relaxation. Each room is designed to cater to guests' needs, ensuring a pleasant and memorable stay Hotel rooms offer a cozy retreat with comfortable beds and stylish decor, providing a home away from home. Modern amenities, like high-speed internet and sleek bathrooms, enhance convenience and relaxation. Each room is designed to cater to guests' needs, ensuring a pleasant and memorable stay  Hotel rooms offer a cozy retreat with comfortable beds and stylish decor, providing a home away from home. Modern amenities, like high-speed internet and sleek bathrooms, enhance convenience and relaxation. Each room is designed to cater to guests' needs, ensuring a pleasant and memorable stay ",
+    'images': [
+      'First1.jpg',
+      'First2.jpg',
+      'First3.jpg',
+    ]
   },
   {
     'image': "img2.jpg",
     'destination': 'Global Wil',
     'country': 'UK',
-    'price': 35
+    'price': 35,
+    'details':
+        "Nestled in the heart of the city, this contemporary suite features floor-to-ceiling windows offering stunning skyline views. The open-plan design includes a plush king-sized bed, a sleek work desk, and a chic lounge area. Guests can unwind in the spa-like bathroom with a rainfall shower and a deep soaking tub.Nestled in the heart of the city, this contemporary suite features floor-to-ceiling windows offering stunning skyline views. The open-plan design includes a plush king-sized bed, a sleek work desk, and a chic lounge area. Guests can unwind in the spa-like bathroom with a rainfall shower and a deep soaking tubNestled in the heart of the city, this contemporary suite features floor-to-ceiling windows offering stunning skyline views. The open-plan design includes a plush king-sized bed, a sleek work desk, and a chic lounge area. Guests can unwind in the spa-like bathroom with a rainfall shower and a deep soaking tub",
+    'images': [
+      'Second1.jpg',
+      'Second2.jpg',
+      'Second3.jpg',
+    ]
   },
   {
     'image': "img3.jpg",
     'destination': 'Guest Room',
     'country': 'AUS',
-    'price': 30
+    'price': 30,
+    'details':
+        " Embrace the serene beach vibes in this sunlit room, decorated with soothing ocean hues and natural textures. The room boasts a comfortable queen-sized bed, a private balcony with sea views, and a cozy reading nook. Enjoy the fresh sea breeze and the gentle sound of waves from the comfort of your room  Embrace the serene beach vibes in this sunlit room, decorated with soothing ocean hues and natural textures. The room boasts a comfortable queen-sized bed, a private balcony with sea views, and a cozy reading nook. Enjoy the fresh sea breeze and the gentle sound of waves from the comfort of your room  Embrace the serene beach vibes in this sunlit room, decorated with soothing ocean hues and natural textures. The room boasts a comfortable queen-sized bed, a private balcony with sea views, and a cozy reading nook. Enjoy the fresh sea breeze and the gentle sound of waves from the comfort of your room",
+    'images': [
+      'Third1.jpg',
+      'Third2.jpg',
+      'Third3.jpg',
+    ]
   },
   {
     'image': "img4.jpg",
     'destination': 'Leaving Room',
     'country': 'ISB',
-    'price': 20
+    'price': 20,
+    'details':
+        "Experience the charm of the countryside in this inviting cabin, complete with exposed wooden beams and a stone fireplace. The room features a king-sized bed with flannel linens, a rustic wooden wardrobe, and a seating area with oversized armchairs.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Experience the charm of the countryside in this inviting cabin, complete with exposed wooden beams and a stone fireplace. The room features a king-sized bed with flannel linens, a rustic wooden wardrobe, and a seating area with oversized armchairs.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Experience the charm of the countryside in this inviting cabin, complete with exposed wooden beams and a stone fireplace. The room features a king-sized bed with flannel linens, a rustic wooden wardrobe, and a seating area with oversized armchairs.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Experience the charm of the countryside in this inviting cabin, complete with exposed wooden beams and a stone fireplace. The room features a king-sized bed with flannel linens, a rustic wooden wardrobe, and a seating area with oversized armchairs.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
+    'images': [
+      'First1.jpg',
+      'First2.jpg',
+      'First3.jpg',
+    ]
   }
 ];
