@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ticket_app/Base/app_routes.dart';
 import 'package:ticket_app/Base/navbar_bottom.dart';
 import 'package:ticket_app/Screen/Hotels/hotels_details.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hamza APP',
       theme: ThemeData(
@@ -28,12 +29,12 @@ class MyApp extends StatelessWidget {
       ),
       // home: BottomNavbar(),
       routes: {
-        AppRoutes.homePage: (context) => const BottomNavbar(),
+        AppRoutes.homePage: (context) => BottomNavbar(),
         AppRoutes.allTickets: (context) => const AllTickets(),
         AppRoutes.TicketScreen: (context) => const TicketScreen(),
         AppRoutes.allHotels: (context) => const AllHotels(),
         AppRoutes.hotelsDetails: (context) => const HotelsDetails(),
-        AppRoutes.hotelsTest:(context)=>const HotelsData(),
+        AppRoutes.hotelsTest: (context) => const HotelsData(),
         // "/": (context) => BottomNavbar(),
         // "/all_tickets": (context) => AllTickets(),
       },

@@ -1,43 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ticket_app/Base/res/styles/app_styles.dart';
+import 'package:ticket_app/controller/text_expention_controller.dart';
 
-class ExpandedTextWidget extends StatefulWidget {
-  const ExpandedTextWidget({super.key,required this.text});
+class ExpandedTextWidget extends StatelessWidget {
+  ExpandedTextWidget({super.key, required this.text});
   final String text;
-
-  @override
-  State<ExpandedTextWidget> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<ExpandedTextWidget> {
- bool isExpended=false;
-    _toggleText(){
-      setState(() {
-      isExpended=!isExpended;
-        
-      });
-      print("value is :");
-    }
-
+  final TextExpentionController controller = Get.put(TextExpentionController());
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(widget.text,
-        maxLines:isExpended==true?null: 3,
-        overflow:isExpended==true?TextOverflow.visible: TextOverflow.ellipsis,
-        
-        ),
-        GestureDetector(
-          onTap: (){
-              _toggleText();
-          },
-          child: Text( isExpended ==true?"More":"Less",style: AppStyles.textStyle.copyWith(color: Colors.blue),
-        )),
-        
-
-      ],
-    );
+    return Obx(() {
+      return Column(
+        children: [
+          Text(
+            text,
+            maxLines: controller.isExpended.value == true ? null : 3,
+            overflow: controller.isExpended.value == true
+                ? TextOverflow.visible
+                : TextOverflow.ellipsis,
+          ),
+          GestureDetector(
+              onTap: () {
+                controller.toggleText();
+              },
+              child: Text(
+                controller.isExpended.value == true ? "More" : "Less",
+                style: AppStyles.textStyle.copyWith(color: Colors.blue),
+              )),
+        ],
+      );
+    });
   }
 }
